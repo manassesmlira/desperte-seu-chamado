@@ -31,7 +31,12 @@ export default async function handler(req, res) {
     }
 
     // 4. Disparar no WhatsApp
-    const grupos = ['120363217885426939@g.us']; 
+    const gruposStr = process.env.KEY_GRUPOS || "";
+    const grupos = gruposStr.split(',');
+
+    if (grupos.length === 0 || grupos[0] === "") {
+      throw new Error("Nenhum grupo configurado nas variáveis de ambiente.");
+    }
     const sucesso = await enviarMensagemCrm(grupos, mensagemDeHoje);
 
     if (sucesso) {
