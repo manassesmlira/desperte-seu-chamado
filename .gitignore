@@ -1,0 +1,26 @@
+# Node.js
+node_modules/
+
+# Variáveis de ambiente
+.env
+
+# Logs
+logs/
+*.log
+
+# Dados temporários
+*.tmp
+*.temp
+*.cache
+
+# Saídas de testes ou builds
+dist/
+out/
+coverage/
+
+# Dados sensíveis
+dados/
+historico.json
+palavrasChave.json
+
+test.js
