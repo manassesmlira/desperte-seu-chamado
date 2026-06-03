@@ -19,7 +19,7 @@ out/
 coverage/
 
 # Dados sensíveis
-dados/
+
 historico.json
 palavrasChave.json
 
